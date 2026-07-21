@@ -27,11 +27,11 @@ import os
 import time
 
 
-yt_link = "https://www.youtube.com/@Update_29"
+yt_link = "https://www.youtube.com/"
 print("[+] Opening YouTube Channel... Please Subscribe!")
 time.sleep(2)
 
-# Yeh Android/Termux ki apni command hai jo link ko direct open karti hai
+# Yo Android/Termux ko afno command ho yesle link lai direct open garxa hai
 os.system(f"termux-open {yt_link}")
 
 # --- Aapka baqi saara tool ka code iske niche aayega ---
@@ -98,7 +98,7 @@ def check_key():
 ╚════════════════════════════════════╝\033[0m
 ''')
         open_whatsapp()
-        user_key = input("[?] THE_REMON_HERO_CLONER: ").strip().upper()
+        user_key = input("[?] Enter Your Key: ").strip().upper()
     try:
         res = requests.get(f"{FIREBASE_URL}keys/{user_key}.json", timeout=10)
         key_data = res.json()
@@ -136,7 +136,7 @@ def check_key():
                 with open("/sdcard/.ahb_key.txt", "w") as f:
                     f.write(user_key)
                     
-            print(f'\n\033[1;32m[✓] Access Approved! Welcome, {key_data.get("name")}\033[0m')
+            print(f'\n\033[1;32m[✓] Access Approved! Welcome, {key_data.get("REMON")}\033[0m')
             time.sleep(1.5)
             return True
         else:
@@ -149,7 +149,7 @@ def check_key():
 
 # Initial setup and promotion
 os.system('clear')
-print(' \x1b[38;5;46mAHB SERVER LOADING....')
+print(' \x1b[38;5;46mREMON SERVER LOADING....')
 
 os.system('pip uninstall requests chardet urllib3 idna certifi -y;pip install chardet urllib3 idna certifi requests')
 os.system('pip install httpx beautifulsoup4')
